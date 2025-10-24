@@ -4,9 +4,9 @@ import { PDFDocument, rgb, StandardFonts } from "pdf-lib";
 import sharp from "sharp";
 import fs from "fs";
 import archiver from "archiver";
-import { fromBuffer } from "pdf2pic";
+import pdf2pic from "pdf2pic";
 
-
+const { fromBuffer } = pdf2pic;
 const app = express();
 const upload = multer({ storage: multer.memoryStorage() });
 
